@@ -2,15 +2,11 @@ var express = require('express');
 var logfmt = require("logfmt");
 var port = Number(process.env.PORT || 3000);
 var app = express();
+var path = require('path');
 
 app.use(logfmt.requestLogger());
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.compress());
-app.use(express.static(__dirname + '/public'));
-app.use(express.bodyParser());
-app.listen(port);
-
-app.post('/', function(req, res){
-  var result = req.rawBody;
-  res.send("hello there world data is " + result);
+app.listen(port, function() {
+	console.log('Listening on port ' + port);
 });
