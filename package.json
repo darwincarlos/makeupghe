@@ -10,10 +10,17 @@
     "type": "git",
     "url": "https://github.com/darwincarlos/makeupghe.git"
   },
-  "author": "",
+  "author": "darwin-carlos",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/darwincarlos/makeupghe/issues"
   },
-  "homepage": "https://github.com/darwincarlos/makeupghe"
+  "homepage": "https://github.com/darwincarlos/makeupghe",
+  "dependencies": {
+    "logfmt": "^1.1.2",
+    "express": "^4.2.0"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
 }
