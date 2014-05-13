@@ -2,7 +2,7 @@ var express = require("express");
 var logfmt = require("logfmt");
 var app = express()
   .use(express.bodyParser())
-  .use(express.static('/public'));
+  .use(express.static(__dirname + '/public'));
 
 app.use(logfmt.requestLogger());
 
