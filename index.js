@@ -1,6 +1,8 @@
 var express = require("express");
 var logfmt = require("logfmt");
-var app = express();
+var app = express()
+  .use(express.bodyParser())
+  .use(express.static('public'));
 
 app.use(logfmt.requestLogger());
 
