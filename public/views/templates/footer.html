@@ -1,0 +1,27 @@
+    <div>
+	    <footer class="footer-section-social" ng-show="footerSocial">
+
+	        <div class="container">
+
+	            <div class="row">
+	                <div class="col-sm-12">
+	                    <span ng-repeat="list in footerMedia" class="fa-stack fa-lg clickableRow" ng-click="openView(list, true)">
+						  <i class="fa {{list.faClass}} fa-stack-2x"></i>
+						</span>
+	                </div>
+	            </div>
+
+	        </div>
+
+	    </footer>
+	    
+	    <footer class="footer-section">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12">
+	                    <small> © 2014 Geraldine Carlos</small>
+	                </div>
+	            </div>
+	        </div>
+	    </footer>
+    </div>

@@ -1,0 +1,15 @@
+    <div class="container-fluid padding-none">
+
+        <div class="banner visible-xs">
+            <img src="{{model.image}}" alt="" class="img-responsive">
+        </div>
+
+        <div class="hidden-xs">
+            <carousel interval="myInterval" disable-ng-animate>
+                <slide ng-repeat="slide in slides" active="slide.active">
+                    <img ng-src="{{slide.image}}">
+                </slide>
+            </carousel>
+        </div>
+
+    </div>

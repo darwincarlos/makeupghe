@@ -1,0 +1,484 @@
+/* custom CSS stylesheet */
+html,
+body {
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h1, h2 {
+  font-weight: 700;
+  text-align: center;
+}
+
+blockquote {
+  /*border-left: 5px solid #c55186;*/
+  background-color: #f5f5f5;
+  padding: 20px 20px;
+  line-height: 150%;
+}
+
+iframe {
+  margin: 0 auto;
+  display: block;
+}
+
+ul.two-col {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}
+
+.full-height {
+  min-height: 100%;
+}
+
+.padding-none {
+  padding: 0px;
+}
+
+.padding-narrow {
+  padding: 10px;
+}
+
+.padding-side {
+  padding: 0px 10px;
+}
+
+.row-centered {
+  text-align: center;
+}
+
+.img-centered {
+  margin: 0 auto;
+}
+
+.header-line {
+  background-color: #c55186;
+  height: 5px;
+  box-shadow: 0px 2px 5px #101010;
+}
+
+.glyphicon {
+  color: #fff;
+}
+
+.large {
+  font-size: x-large;
+}
+
+.pink {
+  color: #c55186;
+}
+
+/* ======================= Carousel ======================= */
+.carousel-control {
+  cursor: pointer;
+}
+
+.carousel-control > .glyphicon-chevron-left {
+  margin-left:-40%;
+}
+
+.carousel-control > .glyphicon-chevron-right {
+  margin-right:-40%;
+}
+
+.carousel-indicators {
+  bottom: -10px;
+}
+/* End carousel */
+
+/* ======================= Table ======================= */
+.table tbody > tr > td.vert-align {
+  vertical-align: middle;
+}
+
+.table td.center {
+  text-align: center;   
+}
+
+.contact-table {
+   padding-top: 30px;
+   color: #3e4957;
+}
+
+.clickableRow:hover {
+  cursor: pointer;
+  color: #101010;
+}
+/* End table */
+
+/* ======================= Navigation ======================= */
+.navbar-section {
+  background-color: #101010;
+}
+
+.nav.navbar-nav {
+  margin: 0px -15px;
+}
+
+.nav.navbar-nav > li > a {
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  padding: 7px 17px;
+
+  background-color: transparent;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.nav.navbar-nav > li .fa {
+  padding-right: 5px;
+}
+
+.nav.navbar-nav > li > a:hover,
+.nav.navbar-nav > li > a:focus,
+.nav.navbar-nav .active > a {
+  background-color: #b04979;
+  outline: none;
+}
+
+.navbar-right .navbar-toggle {
+  border-color: #333;
+}
+
+.navbar-right .navbar-toggle:hover {
+  color: #666;
+  background-color: #222;
+}
+
+.navbar-right .icon-bar {
+  background-color: #ccc;
+}
+
+.nav-spacer {
+  height: 52px;
+}
+/* End navigation */
+
+/* ======================= Tabset ======================= */
+.nav-tabs > li > a {
+  color: #999;
+  background-color: #f5f5f5;
+  border: 1px solid #eee;
+}
+
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+  color: #555;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.nav-tabs > li.active > a {
+  color: #555;
+  font-weight: bold;
+}
+
+.nav-tabs.nav-justified > li > a {
+  margin-bottom: -1px;
+}
+/* End tabset */
+
+/* ======================= Banner ======================= */
+.banner {
+  background: url(../images/background_xs.jpg) no-repeat center center;
+  background-size: cover;
+}
+/* End banner */
+
+/* ======================= Figure ======================= */
+figure {
+  margin: 0 auto;
+  position: relative;
+}
+
+figure img {
+  max-width: 100%;
+  display: block;
+  position: relative;
+}
+
+figcaption {
+  position: absolute;
+  padding: 5px;
+  background: #3e4957;
+  color: #fff;
+  text-align: center;
+}
+
+figure {
+  overflow: hidden;
+}
+
+figure img {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+ 
+figure:hover img {
+  -webkit-transform: translateY(-30px);
+  -moz-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+
+figcaption {
+  height: 100px;
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+  transform: translateY(100%);
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+figure:hover figcaption {
+  opacity: 1;
+  -webkit-transform: translateY(30px);
+  -moz-transform: translateY(30px);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+  transform: translateY(30px);
+  transition: transform 0.4s, opacity 0.1s;
+}
+
+figcaption a {
+  margin-top: 5px;
+}
+
+.thumbnail {
+  background-color: transparent;
+  border: 2px solid #c55186;
+  border-radius: 4px;
+}
+/* End figure */
+
+/* ======================= Pagination ======================= */
+.pagination > li > a,
+.pagination > li > span {
+  color: #b04979;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: #c55186;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #b04979;
+  border-color: #b04979;
+}
+/* End pagination */
+
+/* ======================= Button ======================= */
+.btn-info {
+  color: #fff;
+  background-color: #b04979;
+  border-color: #8d3a61;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active {
+  background-color: #c55186;
+  border-color: #b04979;
+}
+
+.btn-primary {
+  color: #b04979;
+  background-color: #222;
+  border-color: #080808;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #333;
+  border-color: #080808;
+}
+
+.btn-default {
+  background-color: #dadada;
+  border-color: #adadad;
+  color: #555;
+  font-weight: bold;
+  border-left: transparent;
+  border-right: transparent;
+  border-radius: 0;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  background-color: #e1e1e1;
+  border-color: #adadad;
+  color: #555;
+}
+
+.glyphicon-chevron-down {
+  color: #555;
+  top: 3px;
+}
+/* End buttton */
+
+/* ======================= Footer ======================= */
+footer {
+  padding: 0.5em 0;
+  text-align: center;
+  background-color: transparent;
+}
+
+.footer-section,
+.footer-section-social {
+  /*position: absolute;*/
+  width: 100%;
+  color: #ccc;
+  background-color: #3e4957;
+  /* Set the fixed height of the footer here */
+  height: 35px;
+  bottom: 0;
+}
+
+.footer-section-social {
+  padding-top: 15px;
+  color: #3e4957;
+  background-color: #f5f5f5;
+  /* Set the fixed height of the footer here */
+  height: 65px;
+  bottom: 35px;
+}
+/* End footer */
+
+/* ======================= Media queries ======================= */
+@media (min-width: 481px) {
+  iframe {
+    width: 420px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .spacer {
+    height: 91px;
+  }
+  iframe {
+    width: 550px;
+    height: 350px;
+  }
+  ul.two-col {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .spacer {
+    height: 96px;
+  }
+  iframe {
+    width: 850px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 767px) {
+  .xs-center {
+    padding-top: 5px;
+    position: absolute;
+  }
+  .spacer {
+    height: 113px;
+  }
+}
+
+@media (max-width: 480px) {
+  .xs-thumbnail {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  iframe {
+    width: 250px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 380px) {
+  .contact-table .large {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 320px) {
+  .contact-table .large {
+    font-size: small;
+  }
+}
+
+/* End media queries */
+
+/** {
+  border: 1px dashed #3A5FCD;
+}*/
+
+.loading-modal {
+  background: #CCC;
+  height: 100%;
+  width: 100%;
+  opacity: .75;
+  position: absolute; top: 0; left: 0;
+  z-index: 999;
+}
+
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 1;
+}
+.fade.ng-enter,
+.fade.ng-leave {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.fade.ng-enter {
+    opacity: 0;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}

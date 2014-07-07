@@ -1,0 +1,35 @@
+    <nav class="navbar-section navbar-fixed-top" resize>
+
+        <div class="container">
+            <!-- row 1: navigation -->
+            <div class="row">
+
+                <div class="col-xs-12 xs-center col-sm-3">
+                    <img ng-src="{{logo.image}}" alt="" class="img-responsive center-block">
+                </div>
+
+                <div class="col-sm-9 nav-spacer"></div>
+
+                <div class="col-sm-9 padding-none">
+                    <div class="navbar-right">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" ng-click="navCollapsed = !navCollapsed">
+                                <span class="sr-only">Toggle navigation</span>MENU
+                            </button>
+                        </div>
+                        <!-- nav links -->
+                        <div class="collapse navbar-collapse" collapse="navCollapsed" ng-click="navCollapsed = true">
+                            <ul class="nav navbar-nav">
+                                <li ng-repeat="list in navList" ng-class="{ active: isActive('{{list.url}}') }"><a href="" ng-click="openView(list)"><i class="fa {{list.faClass}} fa-lg"></i> {{list.page}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
+            <!-- end row 1 -->
+        </div>
+
+        <div class="header-line"></div>
+        
+    </nav>

@@ -1,0 +1,21 @@
+    <div class="spacer"></div>
+    <!-- body -->
+    <div class="container full-height">
+
+        <h2>Contact</h2>
+        <p style="text-align: center;">A home service is welcome or any location that caters in your event. Refer to this handy table for contact information.</p>
+        
+        <div class="contact-table">
+            <table class="table table-striped table-hover">
+                <tbody>
+                    <tr class='clickableRow' ng-repeat="contact in contacts" href="" ng-click="openView(contact, true)">
+                        <td class="center"><i class="{{contact.faClass}}"></i></td>
+                        <td class="vert-align large">{{contact.text}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <!-- end body -->
+    <my-footer></my-footer>

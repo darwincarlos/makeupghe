@@ -1,0 +1,64 @@
+    <div class="spacer"></div>
+    <!-- banner -->
+    <my-carousel></my-carousel>
+    <!-- end banner -->
+
+    <!-- body -->
+    <div class="container full-height">
+
+        <hr>
+        <!-- row 3: intro -->
+        <div class="row">
+
+            <aside class="col-xs-12 col-sm-4 col-sm-push-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Services offered</h4>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="two-col">
+                            <li ng-repeat="service in services"> {{service.name}} </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="col-xs-12 col-sm-8 col-sm-pull-4">
+                <blockquote>
+                    <p><i class="fa fa-quote-left fa-lg pull-left"></i> <span class="large pink">Geraldine Carlos</span> is a Marketing Graduate by profession. After spending 6 years in the corporate world, she got her interest in <span class="large pink">Makeup</span> when a friend approached her to do some makeup in a pageant. Decided to pursue it and became her <span class="large pink">passion</span>... </p>
+                    <br /><a href="#/about" class="btn btn-primary">read more</a>
+                </blockquote>
+            </div>
+
+        </div>
+        <!-- end row 3 -->
+
+        <hr>
+
+        <!-- row 4: thumbnails -->
+        <div class="row">
+
+            <div ng-repeat="list in thumbs" class="col-xs-6 xs-thumbnail col-sm-4 col-md-3 padding-side {{addClass(list.url)}}">
+                <div class="thumbnail">
+                    <figure>
+                        <img ng-src="{{list.image}}" alt="" class="img-responsive">
+                        <figcaption>
+                            <span class="glyphicon glyphicon-{{list.glyphicon}}"></span>
+                            <span> {{list.text}}</span><br>
+                            <a ng-click="openView(list)" class="btn btn-info">Take a look</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+        <!-- end row 4 -->
+
+        <hr>
+
+
+    </div> 
+    <!-- end body -->
+    <!-- footer -->
+    <my-footer></my-footer>
+    <!-- end footer -->
