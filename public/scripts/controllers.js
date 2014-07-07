@@ -3,8 +3,10 @@
 // Navigation controller 
 app.controller('NavCtrl', function ($scope, $location, $window) {
 
+    $scope.ready = false;
     $scope.$watch('data', function (newResult, oldResult) {
-        if (newResult !== oldResult) {
+        $scope.ready = newResult !== oldResult;
+        if ($scope.ready) {
             $scope.logo = newResult.logo[0];
             $scope.navList = newResult.navList;
         }

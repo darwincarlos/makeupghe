@@ -29,15 +29,13 @@
 </head>
 
 <body>
-    
-    <div class="loading-modal" ng-show="loadingView">Loading...</div>
-
     <!-- navbar-section -->
     <my-navigation></my-navigation>
     <!-- end navbar-section -->
 
     <!-- view-section -->
     <div ng-view class="fade"></div>
+    <div class="loading-modal" ng-show="loadingView">Loading...</div>
     <!-- end view-section -->
 
     <!-- javascript libraries -->
