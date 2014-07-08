@@ -74,6 +74,53 @@ ul.two-col {
   color: #c55186;
 }
 
+/* ======================= Loading ======================= */
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -24px;
+  margin-left: -24px;
+}
+
+.loading-modal {
+  height: 100%;
+  width: 100%;
+  position: absolute; top: 0; left: 0;
+  z-index: 999;
+}
+/* End loading */
+
+/* ======================= ng-view fade ======================= */
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 1;
+}
+.fade.ng-enter,
+.fade.ng-leave {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.fade.ng-enter {
+    opacity: 0;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}
+/* End ng-view fade */
+
 /* ======================= Carousel ======================= */
 .carousel-control {
   cursor: pointer;
@@ -439,46 +486,8 @@ footer {
     font-size: small;
   }
 }
-
 /* End media queries */
 
 /** {
   border: 1px dashed #3A5FCD;
 }*/
-
-.loading-modal {
-  background: #CCC;
-  height: 100%;
-  width: 100%;
-  opacity: .75;
-  position: absolute; top: 0; left: 0;
-  z-index: 999;
-}
-
-.fade {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    opacity: 1;
-}
-.fade.ng-enter,
-.fade.ng-leave {
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
-}
-.fade.ng-enter {
-    opacity: 0;
-}
-.fade.ng-enter-active {
-    opacity: 1;
-}
-.fade.ng-leave {
-    opacity: 1;
-}
-.fade.ng-leave-active {
-    opacity: 0;
-}
