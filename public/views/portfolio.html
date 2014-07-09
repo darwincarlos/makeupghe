@@ -3,6 +3,12 @@
     <div class="container full-height">
 
         <h1>{{header}}</h1>
+        <div ng-if="header === 'Portfolio'">
+            <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed vulputate nisi, ut semper dolor.</p>
+        </div>
+        <div ng-if="header !== 'Portfolio'">
+            <p style="text-align: center;">Ut lacus tellus, imperdiet consequat nisl quis, elementum porta dolor. Duis ut purus vel ipsum facilisis mattis.</p>
+        </div>
 
         <br />
 
