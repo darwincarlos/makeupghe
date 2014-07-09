@@ -1,7 +1,10 @@
+'use strict';
+
 /* ======================= Templates Controller ======================= */
+var ctrl = angular.module('makeupGhe.controllers', []);
 
 // Navigation controller 
-app.controller('NavCtrl', function ($scope, $location, $window) {
+ctrl.controller('NavCtrl', function ($scope, $location, $window) {
 
     $scope.ready = false;
     $scope.$watch('data', function (newResult, oldResult) {
@@ -38,14 +41,14 @@ app.controller('NavCtrl', function ($scope, $location, $window) {
     };
 });
 
-app.controller('CarouselCtrl', function ($scope, $rootScope) {
+ctrl.controller('CarouselCtrl', function ($scope, $rootScope) {
 
     $scope.model = $rootScope.data.model[0];
     $scope.slides = $rootScope.data.slides;
     $scope.myInterval = 5000;
 });
 
-app.controller('FooterCtrl', function ($scope, $rootScope) {
+ctrl.controller('FooterCtrl', function ($scope, $rootScope) {
 
     $scope.footerMedia = $rootScope.data.footerMedia;
 });
@@ -53,7 +56,7 @@ app.controller('FooterCtrl', function ($scope, $rootScope) {
 
 /* ======================= Views Controller ======================= */
 
-app.controller('HomeCtrl', function ($scope, $rootScope) {
+ctrl.controller('HomeCtrl', function ($scope, $rootScope) {
 
     $scope.thumbs = $rootScope.data.thumbs;
     $scope.services = $rootScope.data.services;
@@ -63,17 +66,17 @@ app.controller('HomeCtrl', function ($scope, $rootScope) {
     };
 });
 
-app.controller('AboutCtrl', function ($scope, $rootScope) {
+ctrl.controller('AboutCtrl', function ($scope, $rootScope) {
 
     $scope.aboutImg = $rootScope.data.aboutImg[0];
 });
 
-app.controller('ContactCtrl', function ($scope, $rootScope) {
+ctrl.controller('ContactCtrl', function ($scope, $rootScope) {
 
     $scope.contacts = $rootScope.data.contacts;
 });
 
-app.controller('GalleryCtrl', function ($scope, $modal, $location, $window, $rootScope) {
+ctrl.controller('GalleryCtrl', function ($scope, $modal, $location, $window, $rootScope, globals) {
 
     var activeArray = [];
     var defaultSet = 'bridal';
@@ -83,7 +86,7 @@ app.controller('GalleryCtrl', function ($scope, $modal, $location, $window, $roo
     $scope.videos = $rootScope.data.videos; // array of video thumbnails 
     $scope.tabset = [];
 
-    for (i in $scope.images) $scope.tabset.push(i.toProperCase());
+    for (var i in $scope.images) $scope.tabset.push(i.toProperCase());
 
     activeArray = ($location.path() === "/portfolio") ? $scope.images[defaultSet] : $scope.videos;
 
@@ -123,7 +126,7 @@ app.controller('GalleryCtrl', function ($scope, $modal, $location, $window, $roo
     $scope.open = function (index, size) {
 
         var modalInstance = $modal.open({
-            templateUrl: tempUrl + 'modal.html',
+            templateUrl: globals.tempUrl + 'modal.html',
             controller: ModalInstanceCtrl,
             size: size,
             resolve: {

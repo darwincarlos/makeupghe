@@ -1,31 +1,35 @@
-app.directive('myNavigation', function() {
+'use strict';
+
+var dir = angular.module('makeupGhe.directives', []);
+
+dir.directive('myNavigation', function (globals) {
     return {
         restrict: 'E',
         replace: true,
-        templateUrl: tempUrl + 'navigation.html',
+        templateUrl: globals.tempUrl + 'navigation.html',
         controller: 'NavCtrl'
     }
 });
 
-app.directive('myCarousel', function() {
+dir.directive('myCarousel', function (globals) {
     return {
         restrict: 'E',
         replace: true,
-        templateUrl: tempUrl + 'carousel.html',
+        templateUrl: globals.tempUrl + 'carousel.html',
         controller: 'CarouselCtrl'
     }
 });
 
-app.directive('myFooter', function () {
+dir.directive('myFooter', function (globals) {
     return {
         restrict: 'E',
         replace: true,
-        templateUrl: tempUrl + 'footer.html',
+        templateUrl: globals.tempUrl + 'footer.html',
         controller: 'FooterCtrl'
     }
 });
 
-app.directive('resize', function ($window) {
+dir.directive('resize', function ($window) {
     return {
         link: function (scope, element) {
             var w = angular.element($window);
@@ -42,7 +46,7 @@ app.directive('resize', function ($window) {
 });
 
 // angular ui carousel and ngAnimate bug workaround 
-app.directive('disableNgAnimate', ['$animate', function($animate) {
+dir.directive('disableNgAnimate', ['$animate', function($animate) {
     return {
         restrict: 'A',
         link: function(scope, element) {

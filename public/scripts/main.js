@@ -1,36 +1,40 @@
-var viewUrl = 'views/';
-var tempUrl = 'views/templates/';
-var jsonData = 'data/data.json';
+'use strict';
 
-var app = angular.module('makeupGhe', ['ui.bootstrap', 'ngTouch', 'ngRoute', 'ngAnimate']);
-var resolveData = { data: function (srvData) { return srvData.getData(); } }
+var app = angular.module('makeupGhe', ['makeupGhe.services', 'makeupGhe.controllers', 'makeupGhe.directives', 'ui.bootstrap', 'ngTouch', 'ngRoute', 'ngAnimate']);
 
-app.config(function ($routeProvider, $locationProvider, $httpProvider) {
+app.constant('globals', {
+    viewUrl: 'views/',
+    tempUrl: 'views/templates/',
+    jsonData: 'data/data.json',
+    resolveData: { data: function (srvData) { return srvData.getData(); } }
+});
+
+app.config(function ($routeProvider, $locationProvider, $httpProvider, globals) {
     $routeProvider
         .when('/', {
-            templateUrl: viewUrl + 'home.html',
+            templateUrl: globals.viewUrl + 'home.html',
             controller: 'HomeCtrl',
-            resolve: resolveData
+            resolve: globals.resolveData
         })
         .when('/about', {
-            templateUrl: viewUrl + 'about.html',
+            templateUrl: globals.viewUrl + 'about.html',
             controller: 'AboutCtrl',
-            resolve: resolveData
+            resolve: globals.resolveData
         })
         .when('/portfolio', {
-            templateUrl: viewUrl + 'portfolio.html',
+            templateUrl: globals.viewUrl + 'portfolio.html',
             controller: 'GalleryCtrl',
-            resolve: resolveData
+            resolve: globals.resolveData
         })
         .when('/video', {
-            templateUrl: viewUrl + 'portfolio.html',
+            templateUrl: globals.viewUrl + 'portfolio.html',
             controller: 'GalleryCtrl',
-            resolve: resolveData
+            resolve: globals.resolveData
         })
         .when('/contact', {
-            templateUrl: viewUrl + 'contact.html',
+            templateUrl: globals.viewUrl + 'contact.html',
             controller: 'ContactCtrl',
-            resolve: resolveData
+            resolve: globals.resolveData
         })
         .otherwise({
             redirectTo: '/'
