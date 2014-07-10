@@ -1,4 +1,5 @@
     <div class="spacer"></div>
+
     <!-- body section -->
     <div class="container full-height">
 
@@ -31,9 +32,19 @@
         <!-- row 2: gallery -->
         <div class="container-fluid">
 
-            <div class="row">
+            <!-- <div class="row">
 
                 <div class="col-xs-6 col-sm-3 padding-narrow" ng-repeat="image in pageImages">
+                    <a href="" ng-click="open($index, 'lg')">
+                        <img class="img-responsive" ng-src="{{image.image}}">
+                    </a>
+                </div>
+
+            </div> -->
+
+            <div class="row msnry">
+
+                <div class="img-item padding-narrow" ng-repeat="image in pageImages">
                     <a href="" ng-click="open($index, 'lg')">
                         <img class="img-responsive" ng-src="{{image.image}}">
                     </a>
