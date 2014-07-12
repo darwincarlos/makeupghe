@@ -4,7 +4,7 @@
 var ctrl = angular.module('makeupGhe.controllers', []);
 
 // Navigation controller 
-ctrl.controller('NavCtrl', function ($scope, $location, $window) {
+ctrl.controller('NavCtrl', function ($scope, $location, $window, $timeout) {
 
     $scope.ready = false;
     $scope.$watch('data', function (newResult, oldResult) {
