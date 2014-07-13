@@ -493,7 +493,10 @@ footer {
     position: absolute;
   }
   .spacer {
-    height: 113px;
+    height: 107px;
+  }
+  .nav.navbar-nav > li > a {
+    font-size: 1em;
   }
   div .msnry {
     -moz-column-count: 3;

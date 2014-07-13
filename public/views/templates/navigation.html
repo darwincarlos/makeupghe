@@ -20,7 +20,11 @@
                         <!-- nav links -->
                         <div class="collapse navbar-collapse" collapse="navCollapsed" ng-click="navCollapsed = true">
                             <ul class="nav navbar-nav">
-                                <li ng-repeat="list in navList" ng-class="{ active: isActive('{{list.url}}') }"><a href="" ng-click="openView(list)"><i class="fa {{list.faClass}} fa-lg"></i> {{list.page}}</a></li>
+                                <li ng-repeat="list in navList" ng-class="{ active: isActive('{{list.url}}') }">
+                                    <a href="" ng-click="openView(list)">
+                                        <i class="fa {{list.faClass}} fa-lg"></i> {{list.page}}
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
